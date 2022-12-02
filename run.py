@@ -13,9 +13,9 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('pub_quiz_challenge')
 
 questions = SHEET.worksheet('questions')
-answers = SHEET.worksheet('answers')
-
 question_data = questions.get_all_values()
+
+answers = SHEET.worksheet('answers')
 answer_data = answers.get_all_values()
 
 # print(question_data[1][1])
@@ -37,16 +37,20 @@ def start_quiz():
     print("")
 
     start = input("Would you like to play? Type Y/N: ").upper()
+
+    print("")
+
+
     if start == "Y":
-        print("Choose A Topic from 1-5 below: \n")
         print(f"1. {question_data[0][0]}")
         print(f"2. {question_data[0][1]}")
         print(f"3. {question_data[0][2]}")
         print(f"4. {question_data[0][3]}")
         print(f"5. {question_data[0][4]}\n")
-        input("Enter your choice here: ")
     else:
         quit()
 
 
 start_quiz()
+
+topic_choice = input("Choose a topic from 1-5 above: ")
