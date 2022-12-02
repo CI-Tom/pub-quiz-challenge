@@ -12,27 +12,41 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('pub_quiz_challenge')
 
-# questions = SHEET.worksheet('questions')
-# answers = SHEET.worksheet('answers')
+questions = SHEET.worksheet('questions')
+answers = SHEET.worksheet('answers')
 
-# question_data = questions.get_all_values()
-# answer_data = answers.get_all_values()
+question_data = questions.get_all_values()
+answer_data = answers.get_all_values()
 
-# print(question_data[1])
-# print(answer_data[1])
+# print(question_data[1][1])
+# print(answer_data[1][1])
 
 def start_quiz():
     """
-    Start screen with option to start quiz
+    Function to allow the user to start a new quiz and select a topic
     """
-    print("")
-    print(" _______  __   __  _______    _______  __   __  ___   _______    _______  __   __  _______  ___      ___      _______  __    _  _______  _______")
+    print("\n-------------------------------------------------------------------------------------------------------------------------------------------------")
+    print(" _______  __   __  _______    _______  __   __  ___   _______    _______  __   __  _______  ___      ___      _______  __    _  _______  _______ ")
     print("|       ||  | |  ||  _    |  |       ||  | |  ||   | |       |  |    ___||  | |  ||   _   ||   |    |   |    |       ||  |  | ||       ||       |")
     print("|    _  ||  | |  || |_|   |  |   _   ||  | |  ||   | |____   |  |   /    |  |_|  ||  |_|  ||   |    |   |    |    ___||   |_| ||    ___||    ___|")
-    print("|   |_| ||  |_|  ||       |  |  | |  ||  |_|  ||   |  ____|  |  |  |     |       ||       ||   |    |   |    |   |___ |       ||   | __ |   |___")
-    print("|    ___||       ||  _   |   |  |_|  ||       ||   | | ______|  |  |     |       ||       ||   |___ |   |___ |    ___||  _    ||   ||  ||    ___|")
-    print("|   |    |       || |_|   |  |      | |       ||   | | |_____   |   \___ |   _   ||   _   ||       ||       ||   |___ | | |   ||   |_| ||   |___ ")
-    print("|___|    |_______||_______|  |____||_||_______||___| |_______|  |_______||__| |__||__| |__||_______||_______||_______||_|  |__||_______||_______|")
+    print("|   |_| ||  |_|  ||       |  |  | |  ||  |_|  ||   |  ____|  |  |  |     |       ||       ||   |    |   |    |   |___ |       ||   | __ |   |___ ")
+    print("|    ___||       ||  _   |   |  |_|  ||       ||   | | ______|  |  |     |   _   ||   _   ||   |___ |   |___ |    ___||  _    ||   ||  ||    ___|")
+    print("|   |    |       || |_|   |  |      | |       ||   | | |_____   |   \___ |  | |  ||  | |  ||       ||       ||   |___ | | |   ||   |_| ||   |___ ")
+    print("|___|    |_______||_______|  |____||_||_______||___| |_______|  |_______||__| |__||__| |__||_______||_______||_______||_|  |__||_______||_______|\n")
+    print("-------------------------------------------------------------------------------------------------------------------------------------------------")
     print("")
+
+    start = input("Would you like to play? Type Y/N: ").upper()
+    if start == "Y":
+        print("Choose A Topic from 1-5 below: \n")
+        print(f"1. {question_data[0][0]}")
+        print(f"2. {question_data[0][1]}")
+        print(f"3. {question_data[0][2]}")
+        print(f"4. {question_data[0][3]}")
+        print(f"5. {question_data[0][4]}\n")
+        input("Enter your choice here: ")
+    else:
+        quit()
+
 
 start_quiz()
