@@ -71,6 +71,9 @@ history_answers = answer_data[1][4], answer_data[2][4], answer_data[3][4], answe
 
 
 def topic_choice():
+    """
+    Provide feedback to user after choosing a topic
+    """
     if topic == "1":
         print("\nYou have selected " + "'" + question_data[0][0] + "'\n")
     elif topic == "2":
