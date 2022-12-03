@@ -21,25 +21,25 @@ answer_data = answers.get_all_values()
 # print(question_data[1][1])
 # print(answer_data[1][1])
 
+
 def start_quiz():
     """
     Function to allow the user to start a new quiz and select a topic
     """
-    print("\n-------------------------------------------------------------------------------------------------------------------------------------------------")
-    print(" _______  __   __  _______    _______  __   __  ___   _______    _______  __   __  _______  ___      ___      _______  __    _  _______  _______ ")
-    print("|       ||  | |  ||  _    |  |       ||  | |  ||   | |       |  |    ___||  | |  ||   _   ||   |    |   |    |       ||  |  | ||       ||       |")
-    print("|    _  ||  | |  || |_|   |  |   _   ||  | |  ||   | |____   |  |   /    |  |_|  ||  |_|  ||   |    |   |    |    ___||   |_| ||    ___||    ___|")
-    print("|   |_| ||  |_|  ||       |  |  | |  ||  |_|  ||   |  ____|  |  |  |     |       ||       ||   |    |   |    |   |___ |       ||   | __ |   |___ ")
-    print("|    ___||       ||  _   |   |  |_|  ||       ||   | | ______|  |  |     |   _   ||   _   ||   |___ |   |___ |    ___||  _    ||   ||  ||    ___|")
-    print("|   |    |       || |_|   |  |      | |       ||   | | |_____   |   \___ |  | |  ||  | |  ||       ||       ||   |___ | | |   ||   |_| ||   |___ ")
-    print("|___|    |_______||_______|  |____||_||_______||___| |_______|  |_______||__| |__||__| |__||_______||_______||_______||_|  |__||_______||_______|\n")
-    print("-------------------------------------------------------------------------------------------------------------------------------------------------")
+    print("\n------------------------------------------------------------")
+    print(" _______  __   __  _______    _______  __   __  ___   _______ ")
+    print("|       ||  | |  ||  _    |  |       ||  | |  ||   | |       |")
+    print("|    _  ||  | |  || |_|   |  |   _   ||  | |  ||   | |____   |")
+    print("|   |_| ||  |_|  ||       |  |  | |  ||  |_|  ||   |  ____|  |")
+    print("|    ___||       ||  _   |   |  |_|  ||       ||   | | ______|")
+    print("|   |    |       || |_|   |  |      | |       ||   | | |_____ ")
+    print("|___|    |_______||_______|  |____||_||_______||___| |_______|\n")
+    print("--------------------------------------------------------------")
     print("")
 
-    start = input("Would you like to play? Type Y/N: ").upper()
+    start = input("Would you like to play, Y/N: ").upper()
 
     print("")
-
 
     if start == "Y":
         print(f"1. {question_data[0][0]}")
@@ -53,4 +53,15 @@ def start_quiz():
 
 start_quiz()
 
-topic_choice = input("Choose a topic from 1-5 above: ")
+topic = input("Choose a topic from 1-5 above: ")
+
+science_questions = question_data[1][0], question_data[2][0], question_data[3][0], question_data[4][0], question_data[5][0]
+# print(science_questions)
+sports_questions = question_data[1][1], question_data[2][1], question_data[3][1], question_data[4][1], question_data[5][1]
+# print(sports_questions[0])
+movies_questions = question_data[1][2], question_data[2][2], question_data[3][2], question_data[4][2], question_data[5][2]
+# print(movies_questions[4])
+music_questions = question_data[1][3], question_data[2][3], question_data[3][3], question_data[4][3], question_data[5][3]
+# print(music_questions[3)
+history_questions = question_data[1][4], question_data[2][4], question_data[3][4], question_data[4][4], question_data[5][4]
+# print(history_questions[2])
