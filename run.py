@@ -24,6 +24,19 @@ answer_data = answers.get_all_values()
 # print(question_data[1][1])
 # print(answer_data[1][1])
 
+science_questions = question_data[1][0], question_data[2][0], question_data[3][0], question_data[4][0], question_data[5][0] # pylint: disable=line-too-long # noqa
+sports_questions = question_data[1][1], question_data[2][1], question_data[3][1], question_data[4][1], question_data[5][1] # pylint: disable=line-too-long # noqa
+movies_questions = question_data[1][2], question_data[2][2], question_data[3][2], question_data[4][2], question_data[5][2] # pylint: disable=line-too-long # noqa
+music_questions = question_data[1][3], question_data[2][3], question_data[3][3], question_data[4][3], question_data[5][3] # pylint: disable=line-too-long # noqa
+history_questions = question_data[1][4], question_data[2][4], question_data[3][4], question_data[4][4], question_data[5][4] # pylint: disable=line-too-long # noqa
+
+
+science_answers = answer_data[1][0], answer_data[2][0], answer_data[3][0], answer_data[4][0], answer_data[5][0] # pylint: disable=line-too-long # noqa
+sports_answers = answer_data[1][1], answer_data[2][1], answer_data[3][1], answer_data[4][1], answer_data[5][1] # pylint: disable=line-too-long # noqa
+movies_answers = answer_data[1][2], answer_data[2][2], answer_data[3][2], answer_data[4][2], answer_data[5][2] # pylint: disable=line-too-long # noqa
+music_answers = answer_data[1][3], answer_data[2][3], answer_data[3][3], answer_data[4][3], answer_data[5][3] # pylint: disable=line-too-long # noqa
+history_answers = answer_data[1][4], answer_data[2][4], answer_data[3][4], answer_data[4][4], answer_data[5][4] # pylint: disable=line-too-long # noqa
+
 
 def start_quiz():
     """
@@ -57,20 +70,6 @@ def start_quiz():
 start_quiz()
 
 topic = input("Choose a topic from 1-5 above: ")
-
-
-science_questions = question_data[1][0], question_data[2][0], question_data[3][0], question_data[4][0], question_data[5][0] # pylint: disable=line-too-long # noqa
-sports_questions = question_data[1][1], question_data[2][1], question_data[3][1], question_data[4][1], question_data[5][1] # pylint: disable=line-too-long # noqa
-movies_questions = question_data[1][2], question_data[2][2], question_data[3][2], question_data[4][2], question_data[5][2] # pylint: disable=line-too-long # noqa
-music_questions = question_data[1][3], question_data[2][3], question_data[3][3], question_data[4][3], question_data[5][3] # pylint: disable=line-too-long # noqa
-history_questions = question_data[1][4], question_data[2][4], question_data[3][4], question_data[4][4], question_data[5][4] # pylint: disable=line-too-long # noqa
-
-
-science_answers = answer_data[1][0], answer_data[2][0], answer_data[3][0], answer_data[4][0], answer_data[5][0] # pylint: disable=line-too-long # noqa
-sports_answers = answer_data[1][1], answer_data[2][1], answer_data[3][1], answer_data[4][1], answer_data[5][1] # pylint: disable=line-too-long # noqa
-movies_answers = answer_data[1][2], answer_data[2][2], answer_data[3][2], answer_data[4][2], answer_data[5][2] # pylint: disable=line-too-long # noqa
-music_answers = answer_data[1][3], answer_data[2][3], answer_data[3][3], answer_data[4][3], answer_data[5][3] # pylint: disable=line-too-long # noqa
-history_answers = answer_data[1][4], answer_data[2][4], answer_data[3][4], answer_data[4][4], answer_data[5][4] # pylint: disable=line-too-long # noqa
 
 
 def topic_choice():
