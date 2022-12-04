@@ -65,10 +65,10 @@ def start_new_quiz():
     selection = input("Enter 1, 2, 3, 4 or 5 to start: \n")
 
     if selection == "1":
-        print("\nYou have selected " + "'" + question_data[0][0] + "', let's begin!\n") # noqa
+        print("\nYou have selected "+"'"+question_data[0][0]+"', let's begin!")
 
         for key in science:
-            print("\n------------------------------------------------------\n")
+            print("--------------------------------------------------------\n")
             print(key)
             for i in science_choices[num_question-1]:
                 print("")
@@ -83,10 +83,10 @@ def start_new_quiz():
         player_score(correct_answers, answers)
 
     elif selection == "2":
-        print("\nYou have selected " + "'" + question_data[0][1] + "', let's begin!\n") # noqa
+        print("\nYou have selected "+"'"+question_data[0][1]+"', let's begin!")
 
         for key in sports:
-            print("\n------------------------------------------------------\n")
+            print("--------------------------------------------------------\n")
             print(key)
             for i in sports_choices[num_question-1]:
                 print("")
@@ -101,10 +101,10 @@ def start_new_quiz():
         player_score(correct_answers, answers)
 
     elif selection == "3":
-        print("\nYou have selected " + "'" + question_data[0][2] + "', let's begin!\n") # noqa
+        print("\nYou have selected "+"'"+question_data[0][2]+"', let's begin!")
 
         for key in movies_tv:
-            print("\n------------------------------------------------------\n")
+            print("--------------------------------------------------------\n")
             print(key)
             for i in movies_tv_choices[num_question-1]:
                 print("")
@@ -119,10 +119,10 @@ def start_new_quiz():
         player_score(correct_answers, answers)
 
     elif selection == "4":
-        print("\nYou have selected " + "'" + question_data[0][3] + "', let's begin!\n") # noqa
+        print("\nYou have selected "+"'"+question_data[0][3]+"', let's begin!")
 
         for key in music:
-            print("\n------------------------------------------------------\n")
+            print("--------------------------------------------------------\n")
             print(key)
             for i in music_choices[num_question-1]:
                 print("")
@@ -137,10 +137,10 @@ def start_new_quiz():
         player_score(correct_answers, answers)
 
     elif selection == "5":
-        print("\nYou have selected " + "'" + question_data[0][4] + "', let's begin!\n") # noqa
+        print("\nYou have selected "+"'"+question_data[0][4]+"', let's begin!")
 
         for key in history:
-            print("\n------------------------------------------------------\n")
+            print("--------------------------------------------------------\n")
             print(key)
             for i in history_choices[num_question-1]:
                 print("")
@@ -279,4 +279,4 @@ start_new_quiz()
 while play_again():
     start_new_quiz()
 
-print("OK Goodbye and Thanks for Playing!\n")
+print("\nOK Goodbye. Thanks for Playing!\n")
