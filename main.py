@@ -29,7 +29,49 @@ answer_c_data = answers_c.get_all_values()
 
 
 def start_new_quiz():
-    pass
+    """
+    Allow player to start quiz and select a topic
+    """
+    answers = []
+    correct_answers = 0
+    num_question = 1
+
+    print("\n--------------------------------------------------------------")
+    print(" _______  __   __  _______    _______  __   __  ___   _______ ")
+    print("|       ||  | |  ||  _    |  |       ||  | |  ||   | |       |")
+    print("|    _  ||  | |  || |_|   |  |   _   ||  | |  ||   | |____   |")
+    print("|   |_| ||  |_|  ||       |  |  | |  ||  |_|  ||   |  ____|  |")
+    print("|    ___||       ||  _   |   |  |_|  ||       ||   | | ______|")
+    print("|   |    |       || |_|   |  |      | |       ||   | | |_____ ")
+    print("|___|    |_______||_______|  |____||_||_______||___| |_______|\n")
+    print("--------------------------------------------------------------")
+    print("")
+
+    player = input("Welcome to Pub Quiz! Enter your first name to start: ")
+    player = player.capitalize()
+
+    print(f"{player}, please choose a topic from the list below: \n")
+
+    print(f"1. {question_data[0][0]}")
+    print(f"2. {question_data[0][1]}")
+    print(f"3. {question_data[0][2]}")
+    print(f"4. {question_data[0][3]}")
+    print(f"5. {question_data[0][4]}\n")
+
+    selection = input("Enter 1, 2, 3, 4 or 5 to start: ")
+
+    if selection == "1":
+        print("\nYou have selected " + "'" + question_data[0][0] + "', let's begin!\n") # noqa
+    elif selection == "2":
+        print("\nYou have selected " + "'" + question_data[0][1] + "', let's begin!\n") # noqa
+    elif selection == "3":
+        print("\nYou have selected " + "'" + question_data[0][2] + "', let's begin!\n") # noqa
+    elif selection == "4":
+        print("\nYou have selected " + "'" + question_data[0][3] + "', let's begin!\n") # noqa
+    elif selection == "5":
+        print("\nYou have selected " + "'" + question_data[0][4] + "', let's begin!\n") # noqa
+    else:
+        quit()
 
 
 def check_correct_answer():
@@ -123,3 +165,5 @@ history_choices = [
     [answer_a_data[4][4], answer_b_data[4][4], answer_c_data[4][4]],
     [answer_a_data[5][4], answer_b_data[5][4], answer_c_data[5][4]]
 ]
+
+start_new_quiz()
