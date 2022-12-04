@@ -33,7 +33,8 @@ leaderboard_data = leaderboard.get_all_values()
 
 def start_new_quiz():
     """
-    Allow player to start quiz and select a topic
+    Allow player to start quiz and select a topic.
+    Player must enter name and select a topic to begin
     """
     answers = []
     correct_answers = 0
@@ -158,6 +159,9 @@ def start_new_quiz():
 
 
 def check_correct_answer(answer, choice):
+    """
+    Checks answer and provides feedback for correct and incorrect answers
+    """
     if answer == choice:
         print("You are correct!")
         return 1
@@ -167,6 +171,9 @@ def check_correct_answer(answer, choice):
 
 
 def player_score(correct_answers, answers):
+    """
+    Displays score in percent format by checking number of correct answers against number of questions
+    """
     print("\n------------------------------------------------------\n")
 
     score = int((correct_answers/len(answers)) * 100)
@@ -174,6 +181,9 @@ def player_score(correct_answers, answers):
 
 
 def play_again():
+    """
+    Allows player to play another game and select a different topic
+    """
     replay = input("\nWould you like to play again? Enter Y / N: \n").upper()
 
     if replay == "Y":
