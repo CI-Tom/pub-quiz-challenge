@@ -66,6 +66,17 @@ def start_new_quiz():
         for key in science:
             print("\n------------------------------------------------------\n")
             print(key)
+            for i in science_choices[num_question-1]:
+                print("")
+                print(i)
+
+            choice = input("Enter you answer (A, B or C): ").upper()
+            answers.append(choice)
+
+            correct_answers += check_correct_answer(science.get(key), choice)
+            num_question += 1
+
+        player_score(correct_answers, answers)
 
     elif selection == "2":
         print("\nYou have selected " + "'" + question_data[0][1] + "', let's begin!\n") # noqa
@@ -73,6 +84,17 @@ def start_new_quiz():
         for key in sports:
             print("\n------------------------------------------------------\n")
             print(key)
+            for i in sports_choices[num_question-1]:
+                print("")
+                print(i)
+
+            choice = input("Enter you answer (A, B or C): ").upper()
+            answers.append(choice)
+
+            correct_answers += check_correct_answer(sports.get(key), choice)
+            num_question += 1
+
+        player_score(correct_answers, answers)
 
     elif selection == "3":
         print("\nYou have selected " + "'" + question_data[0][2] + "', let's begin!\n") # noqa
@@ -80,6 +102,17 @@ def start_new_quiz():
         for key in movies_tv:
             print("\n------------------------------------------------------\n")
             print(key)
+            for i in movies_tv_choices[num_question-1]:
+                print("")
+                print(i)
+
+            choice = input("Enter you answer (A, B or C): ").upper()
+            answers.append(choice)
+
+            correct_answers += check_correct_answer(movies_tv.get(key), choice)
+            num_question += 1
+
+        player_score(correct_answers, answers)
 
     elif selection == "4":
         print("\nYou have selected " + "'" + question_data[0][3] + "', let's begin!\n") # noqa
@@ -87,6 +120,17 @@ def start_new_quiz():
         for key in music:
             print("\n------------------------------------------------------\n")
             print(key)
+            for i in music_choices[num_question-1]:
+                print("")
+                print(i)
+
+            choice = input("Enter you answer (A, B or C): ").upper()
+            answers.append(choice)
+
+            correct_answers += check_correct_answer(music.get(key), choice)
+            num_question += 1
+
+        player_score(correct_answers, answers)
 
     elif selection == "5":
         print("\nYou have selected " + "'" + question_data[0][4] + "', let's begin!\n") # noqa
@@ -94,61 +138,85 @@ def start_new_quiz():
         for key in history:
             print("\n------------------------------------------------------\n")
             print(key)
+            for i in history_choices[num_question-1]:
+                print("")
+                print(i)
+
+            choice = input("Enter you answer (A, B or C): ").upper()
+            answers.append(choice)
+
+            correct_answers += check_correct_answer(history.get(key), choice)
+            num_question += 1
+
+        player_score(correct_answers, answers)
 
     else:
         quit()
 
 
-def check_correct_answer():
-    pass
+def check_correct_answer(answer, choice):
+    if answer == choice:
+        print("You are correct!")
+        return 1
+    else:
+        print("Sorry, you are wrong!")
+        return 0
 
 
-def player_score():
-    pass
+def player_score(correct_answers, answers):
+    print("\n------------------------------------------------------\n")
+
+    score = int((correct_answers/len(answers)) * 100)
+    print("You scored: " + str(score) + "%\n")
 
 
 def play_again():
-    pass
+    replay = input("\nWould you like to play again? Enter Y / N: ").upper()
+
+    if replay == "Y":
+        return True
+    else:
+        return False
 
 
 science = {
-    question_data[1][0]: answer_a_data[1][0],
-    question_data[2][0]: answer_c_data[2][0],
-    question_data[3][0]: answer_b_data[3][0],
-    question_data[4][0]: answer_a_data[4][0],
-    question_data[5][0]: answer_c_data[5][0]
+    question_data[1][0]: "A",
+    question_data[2][0]: "C",
+    question_data[3][0]: "B",
+    question_data[4][0]: "A",
+    question_data[5][0]: "C"
 }
 
 sports = {
-    question_data[1][1]: answer_b_data[1][1],
-    question_data[2][1]: answer_b_data[2][1],
-    question_data[3][1]: answer_c_data[3][1],
-    question_data[4][1]: answer_a_data[4][1],
-    question_data[5][1]: answer_a_data[5][1],
+    question_data[1][1]: "B",
+    question_data[2][1]: "B",
+    question_data[3][1]: "C",
+    question_data[4][1]: "A",
+    question_data[5][1]: "A",
 }
 
 movies_tv = {
-    question_data[1][2]: answer_b_data[1][2],
-    question_data[2][2]: answer_a_data[2][2],
-    question_data[3][2]: answer_c_data[3][2],
-    question_data[4][2]: answer_b_data[4][2],
-    question_data[5][2]: answer_c_data[5][2],
+    question_data[1][2]: "B",
+    question_data[2][2]: "A",
+    question_data[3][2]: "C",
+    question_data[4][2]: "A",
+    question_data[5][2]: "C",
 }
 
 music = {
-    question_data[1][3]: answer_b_data[1][3],
-    question_data[2][3]: answer_b_data[2][3],
-    question_data[3][3]: answer_b_data[3][3],
-    question_data[4][3]: answer_a_data[4][3],
-    question_data[5][3]: answer_c_data[5][3],
+    question_data[1][3]: "B",
+    question_data[2][3]: "B",
+    question_data[3][3]: "B",
+    question_data[4][3]: "A",
+    question_data[5][3]: "C",
 }
 
 history = {
-    question_data[1][4]: answer_c_data[1][4],
-    question_data[2][4]: answer_a_data[2][4],
-    question_data[3][4]: answer_b_data[3][4],
-    question_data[4][4]: answer_a_data[4][4],
-    question_data[5][4]: answer_b_data[5][4],
+    question_data[1][4]: "C",
+    question_data[2][4]: "A",
+    question_data[3][4]: "B",
+    question_data[4][4]: "A",
+    question_data[5][4]: "B",
 }
 
 science_choices = [
@@ -192,3 +260,8 @@ history_choices = [
 ]
 
 start_new_quiz()
+
+while play_again():
+    start_new_quiz()
+
+print("OK Goodbye and Thanks for Playing!\n")
