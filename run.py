@@ -172,7 +172,8 @@ def check_correct_answer(answer, choice):
 
 def player_score(correct_answers, answers):
     """
-    Displays score in percent format by checking number of correct answers against number of questions
+    Displays score in percent format by checking number of correct answers
+    against number of questions
     """
     print("\n------------------------------------------------------\n")
 
