@@ -54,7 +54,7 @@ def start_new_quiz():
     player = input("Welcome to Pub Quiz! Enter your first name to start: \n")
     player = player.capitalize()
 
-    print(f"{player}, please choose a topic from the list below: \n")
+    print(f"Hi {player}, please choose a topic from the list below: \n")
 
     print(f"1. {question_data[0][0]}")
     print(f"2. {question_data[0][1]}")
@@ -155,7 +155,8 @@ def start_new_quiz():
         player_score(correct_answers, answers)
 
     else:
-        quit()
+        print("\nYou entered an incorrect value.Please try again.\n")
+        start_new_quiz()
 
 
 def check_correct_answer(answer, choice):
