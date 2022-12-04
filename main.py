@@ -62,14 +62,39 @@ def start_new_quiz():
 
     if selection == "1":
         print("\nYou have selected " + "'" + question_data[0][0] + "', let's begin!\n") # noqa
+
+        for key in science:
+            print("\n------------------------------------------------------\n")
+            print(key)
+
     elif selection == "2":
         print("\nYou have selected " + "'" + question_data[0][1] + "', let's begin!\n") # noqa
+
+        for key in sports:
+            print("\n------------------------------------------------------\n")
+            print(key)
+
     elif selection == "3":
         print("\nYou have selected " + "'" + question_data[0][2] + "', let's begin!\n") # noqa
+
+        for key in movies_tv:
+            print("\n------------------------------------------------------\n")
+            print(key)
+
     elif selection == "4":
         print("\nYou have selected " + "'" + question_data[0][3] + "', let's begin!\n") # noqa
+
+        for key in music:
+            print("\n------------------------------------------------------\n")
+            print(key)
+
     elif selection == "5":
         print("\nYou have selected " + "'" + question_data[0][4] + "', let's begin!\n") # noqa
+
+        for key in history:
+            print("\n------------------------------------------------------\n")
+            print(key)
+
     else:
         quit()
 
