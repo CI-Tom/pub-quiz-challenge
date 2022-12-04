@@ -1,5 +1,5 @@
 """
-Importing required modules
+Import required modules
 """
 import gspread
 from google.oauth2.service_account import Credentials
@@ -18,30 +18,24 @@ SHEET = GSPREAD_CLIENT.open('pub_quiz_challenge')
 questions = SHEET.worksheet('questions')
 question_data = questions.get_all_values()
 
-answers = SHEET.worksheet('answers')
-answer_data = answers.get_all_values()
+answers_a = SHEET.worksheet('answers_a')
+answer_a_data = answers_a.get_all_values()
 
-# print(question_data[1][1])
-# print(answer_data[1][1])
+answers_b = SHEET.worksheet('answers_b')
+answer_b_data = answers_b.get_all_values()
 
-science_questions = question_data[1][0], question_data[2][0], question_data[3][0], question_data[4][0], question_data[5][0] # pylint: disable=line-too-long # noqa
-sports_questions = question_data[1][1], question_data[2][1], question_data[3][1], question_data[4][1], question_data[5][1] # pylint: disable=line-too-long # noqa
-movies_questions = question_data[1][2], question_data[2][2], question_data[3][2], question_data[4][2], question_data[5][2] # pylint: disable=line-too-long # noqa
-music_questions = question_data[1][3], question_data[2][3], question_data[3][3], question_data[4][3], question_data[5][3] # pylint: disable=line-too-long # noqa
-history_questions = question_data[1][4], question_data[2][4], question_data[3][4], question_data[4][4], question_data[5][4] # pylint: disable=line-too-long # noqa
+answers_c = SHEET.worksheet('answers_c')
+answer_c_data = answers_c.get_all_values()
 
 
-science_answers = answer_data[1][0], answer_data[2][0], answer_data[3][0], answer_data[4][0], answer_data[5][0] # pylint: disable=line-too-long # noqa
-sports_answers = answer_data[1][1], answer_data[2][1], answer_data[3][1], answer_data[4][1], answer_data[5][1] # pylint: disable=line-too-long # noqa
-movies_answers = answer_data[1][2], answer_data[2][2], answer_data[3][2], answer_data[4][2], answer_data[5][2] # pylint: disable=line-too-long # noqa
-music_answers = answer_data[1][3], answer_data[2][3], answer_data[3][3], answer_data[4][3], answer_data[5][3] # pylint: disable=line-too-long # noqa
-history_answers = answer_data[1][4], answer_data[2][4], answer_data[3][4], answer_data[4][4], answer_data[5][4] # pylint: disable=line-too-long # noqa
-
-
-def start_quiz():
+def start_new_quiz():
     """
-    Function to allow the user to start a new quiz and select a topic
+    Allow player to start quiz and select a topic
     """
+    answers = []
+    correct_answers = 0
+    num_question = 1
+
     print("\n--------------------------------------------------------------")
     print(" _______  __   __  _______    _______  __   __  ___   _______ ")
     print("|       ||  | |  ||  _    |  |       ||  | |  ||   | |       |")
@@ -53,41 +47,221 @@ def start_quiz():
     print("--------------------------------------------------------------")
     print("")
 
-    start = input("Would you like to play, Y/N: ").upper()
+    player = input("Welcome to Pub Quiz! Enter your first name to start: ")
+    player = player.capitalize()
 
-    print("")
+    print(f"{player}, please choose a topic from the list below: \n")
 
-    if start == "Y":
-        print(f"1. {question_data[0][0]}")
-        print(f"2. {question_data[0][1]}")
-        print(f"3. {question_data[0][2]}")
-        print(f"4. {question_data[0][3]}")
-        print(f"5. {question_data[0][4]}\n")
+    print(f"1. {question_data[0][0]}")
+    print(f"2. {question_data[0][1]}")
+    print(f"3. {question_data[0][2]}")
+    print(f"4. {question_data[0][3]}")
+    print(f"5. {question_data[0][4]}\n")
+
+    selection = input("Enter 1, 2, 3, 4 or 5 to start: ")
+
+    if selection == "1":
+        print("\nYou have selected " + "'" + question_data[0][0] + "', let's begin!\n") # noqa
+
+        for key in science:
+            print("\n------------------------------------------------------\n")
+            print(key)
+            for i in science_choices[num_question-1]:
+                print("")
+                print(i)
+
+            choice = input("Enter you answer (A, B or C): ").upper()
+            answers.append(choice)
+
+            correct_answers += check_correct_answer(science.get(key), choice)
+            num_question += 1
+
+        player_score(correct_answers, answers)
+
+    elif selection == "2":
+        print("\nYou have selected " + "'" + question_data[0][1] + "', let's begin!\n") # noqa
+
+        for key in sports:
+            print("\n------------------------------------------------------\n")
+            print(key)
+            for i in sports_choices[num_question-1]:
+                print("")
+                print(i)
+
+            choice = input("Enter you answer (A, B or C): ").upper()
+            answers.append(choice)
+
+            correct_answers += check_correct_answer(sports.get(key), choice)
+            num_question += 1
+
+        player_score(correct_answers, answers)
+
+    elif selection == "3":
+        print("\nYou have selected " + "'" + question_data[0][2] + "', let's begin!\n") # noqa
+
+        for key in movies_tv:
+            print("\n------------------------------------------------------\n")
+            print(key)
+            for i in movies_tv_choices[num_question-1]:
+                print("")
+                print(i)
+
+            choice = input("Enter you answer (A, B or C): ").upper()
+            answers.append(choice)
+
+            correct_answers += check_correct_answer(movies_tv.get(key), choice)
+            num_question += 1
+
+        player_score(correct_answers, answers)
+
+    elif selection == "4":
+        print("\nYou have selected " + "'" + question_data[0][3] + "', let's begin!\n") # noqa
+
+        for key in music:
+            print("\n------------------------------------------------------\n")
+            print(key)
+            for i in music_choices[num_question-1]:
+                print("")
+                print(i)
+
+            choice = input("Enter you answer (A, B or C): ").upper()
+            answers.append(choice)
+
+            correct_answers += check_correct_answer(music.get(key), choice)
+            num_question += 1
+
+        player_score(correct_answers, answers)
+
+    elif selection == "5":
+        print("\nYou have selected " + "'" + question_data[0][4] + "', let's begin!\n") # noqa
+
+        for key in history:
+            print("\n------------------------------------------------------\n")
+            print(key)
+            for i in history_choices[num_question-1]:
+                print("")
+                print(i)
+
+            choice = input("Enter you answer (A, B or C): ").upper()
+            answers.append(choice)
+
+            correct_answers += check_correct_answer(history.get(key), choice)
+            num_question += 1
+
+        player_score(correct_answers, answers)
+
     else:
         quit()
 
 
-start_quiz()
-
-topic = input("Choose a topic from 1-5 above: ")
-
-
-def topic_choice():
-    """
-    Provide feedback to user after choosing a topic
-    """
-    if topic == "1":
-        print("\nYou have selected " + "'" + question_data[0][0] + "'\n")
-    elif topic == "2":
-        print("\nYou have selected " + "'" + question_data[0][1] + "'\n")
-    elif topic == "3":
-        print("\nYou have selected " + "'" + question_data[0][2] + "'\n")
-    elif topic == "4":
-        print("\nYou have selected " + "'" + question_data[0][3] + "'\n")
-    elif topic == "5":
-        print("\nYou have selected " + "'" + question_data[0][4] + "'\n")
+def check_correct_answer(answer, choice):
+    if answer == choice:
+        print("You are correct!")
+        return 1
     else:
-        quit()
+        print("Sorry, you are wrong!")
+        return 0
 
 
-topic_choice()
+def player_score(correct_answers, answers):
+    print("\n------------------------------------------------------\n")
+
+    score = int((correct_answers/len(answers)) * 100)
+    print("You scored: " + str(score) + "%\n")
+
+
+def play_again():
+    replay = input("\nWould you like to play again? Enter Y / N: ").upper()
+
+    if replay == "Y":
+        return True
+    else:
+        return False
+
+
+science = {
+    question_data[1][0]: "A",
+    question_data[2][0]: "C",
+    question_data[3][0]: "B",
+    question_data[4][0]: "A",
+    question_data[5][0]: "C"
+}
+
+sports = {
+    question_data[1][1]: "B",
+    question_data[2][1]: "B",
+    question_data[3][1]: "C",
+    question_data[4][1]: "A",
+    question_data[5][1]: "A",
+}
+
+movies_tv = {
+    question_data[1][2]: "B",
+    question_data[2][2]: "A",
+    question_data[3][2]: "C",
+    question_data[4][2]: "A",
+    question_data[5][2]: "C",
+}
+
+music = {
+    question_data[1][3]: "B",
+    question_data[2][3]: "B",
+    question_data[3][3]: "B",
+    question_data[4][3]: "A",
+    question_data[5][3]: "C",
+}
+
+history = {
+    question_data[1][4]: "C",
+    question_data[2][4]: "A",
+    question_data[3][4]: "B",
+    question_data[4][4]: "A",
+    question_data[5][4]: "B",
+}
+
+science_choices = [
+    [answer_a_data[1][0], answer_b_data[1][0], answer_c_data[1][0]],
+    [answer_a_data[2][0], answer_b_data[2][0], answer_c_data[2][0]],
+    [answer_a_data[3][0], answer_b_data[3][0], answer_c_data[3][0]],
+    [answer_a_data[4][0], answer_b_data[4][0], answer_c_data[4][0]],
+    [answer_a_data[5][0], answer_b_data[5][0], answer_c_data[5][0]]
+]
+
+sports_choices = [
+    [answer_a_data[1][1], answer_b_data[1][1], answer_c_data[1][1]],
+    [answer_a_data[2][1], answer_b_data[2][1], answer_c_data[2][1]],
+    [answer_a_data[3][1], answer_b_data[3][1], answer_c_data[3][1]],
+    [answer_a_data[4][1], answer_b_data[4][1], answer_c_data[4][1]],
+    [answer_a_data[5][1], answer_b_data[5][1], answer_c_data[5][1]]
+]
+
+movies_tv_choices = [
+    [answer_a_data[1][2], answer_b_data[1][2], answer_c_data[1][2]],
+    [answer_a_data[2][2], answer_b_data[2][2], answer_c_data[2][2]],
+    [answer_a_data[3][2], answer_b_data[3][2], answer_c_data[3][2]],
+    [answer_a_data[4][2], answer_b_data[4][2], answer_c_data[4][2]],
+    [answer_a_data[5][2], answer_b_data[5][2], answer_c_data[5][2]]
+]
+
+music_choices = [
+    [answer_a_data[1][3], answer_b_data[1][3], answer_c_data[1][3]],
+    [answer_a_data[2][3], answer_b_data[2][3], answer_c_data[2][3]],
+    [answer_a_data[3][3], answer_b_data[3][3], answer_c_data[3][3]],
+    [answer_a_data[4][3], answer_b_data[4][3], answer_c_data[4][3]],
+    [answer_a_data[5][3], answer_b_data[5][3], answer_c_data[5][3]]
+]
+
+history_choices = [
+    [answer_a_data[1][4], answer_b_data[1][4], answer_c_data[1][4]],
+    [answer_a_data[2][4], answer_b_data[2][4], answer_c_data[2][4]],
+    [answer_a_data[3][4], answer_b_data[3][4], answer_c_data[3][4]],
+    [answer_a_data[4][4], answer_b_data[4][4], answer_c_data[4][4]],
+    [answer_a_data[5][4], answer_b_data[5][4], answer_c_data[5][4]]
+]
+
+start_new_quiz()
+
+while play_again():
+    start_new_quiz()
+
+print("OK Goodbye and Thanks for Playing!\n")
