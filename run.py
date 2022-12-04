@@ -27,6 +27,9 @@ answer_b_data = answers_b.get_all_values()
 answers_c = SHEET.worksheet('answers_c')
 answer_c_data = answers_c.get_all_values()
 
+leaderboard = SHEET.worksheet('leaderboard')
+leaderboard_data = leaderboard.get_all_values()
+
 
 def start_new_quiz():
     """
@@ -47,7 +50,7 @@ def start_new_quiz():
     print("--------------------------------------------------------------")
     print("")
 
-    player = input("Welcome to Pub Quiz! Enter your first name to start: ")
+    player = input("Welcome to Pub Quiz! Enter your first name to start: \n")
     player = player.capitalize()
 
     print(f"{player}, please choose a topic from the list below: \n")
@@ -58,7 +61,7 @@ def start_new_quiz():
     print(f"4. {question_data[0][3]}")
     print(f"5. {question_data[0][4]}\n")
 
-    selection = input("Enter 1, 2, 3, 4 or 5 to start: ")
+    selection = input("Enter 1, 2, 3, 4 or 5 to start: \n")
 
     if selection == "1":
         print("\nYou have selected " + "'" + question_data[0][0] + "', let's begin!\n") # noqa
@@ -70,7 +73,7 @@ def start_new_quiz():
                 print("")
                 print(i)
 
-            choice = input("Enter you answer (A, B or C): ").upper()
+            choice = input("Enter you answer (A, B or C): \n").upper()
             answers.append(choice)
 
             correct_answers += check_correct_answer(science.get(key), choice)
@@ -88,7 +91,7 @@ def start_new_quiz():
                 print("")
                 print(i)
 
-            choice = input("Enter you answer (A, B or C): ").upper()
+            choice = input("Enter you answer (A, B or C): \n").upper()
             answers.append(choice)
 
             correct_answers += check_correct_answer(sports.get(key), choice)
@@ -106,7 +109,7 @@ def start_new_quiz():
                 print("")
                 print(i)
 
-            choice = input("Enter you answer (A, B or C): ").upper()
+            choice = input("Enter you answer (A, B or C): \n").upper()
             answers.append(choice)
 
             correct_answers += check_correct_answer(movies_tv.get(key), choice)
@@ -124,7 +127,7 @@ def start_new_quiz():
                 print("")
                 print(i)
 
-            choice = input("Enter you answer (A, B or C): ").upper()
+            choice = input("Enter you answer (A, B or C): \n").upper()
             answers.append(choice)
 
             correct_answers += check_correct_answer(music.get(key), choice)
@@ -142,7 +145,7 @@ def start_new_quiz():
                 print("")
                 print(i)
 
-            choice = input("Enter you answer (A, B or C): ").upper()
+            choice = input("Enter you answer (A, B or C): \n").upper()
             answers.append(choice)
 
             correct_answers += check_correct_answer(history.get(key), choice)
@@ -171,7 +174,7 @@ def player_score(correct_answers, answers):
 
 
 def play_again():
-    replay = input("\nWould you like to play again? Enter Y / N: ").upper()
+    replay = input("\nWould you like to play again? Enter Y / N: \n").upper()
 
     if replay == "Y":
         return True
