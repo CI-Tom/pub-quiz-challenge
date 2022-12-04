@@ -15,7 +15,7 @@ Game developed by Tom Manahan for Code Institute Project Portfolio 3 using Pytho
 
 [Live Game Link](https://pub-quiz-challenge.herokuapp.com/)
 
-![Home Screen]()
+![Home Screen](assets/images/Quiz%20Start%20Screen.PNG)
 
 ## Table of contents
 
