@@ -201,21 +201,21 @@ If play again is chosen, the quiz restarts and the user enters their name again 
 
    - Steps
 
-     - Go to Heroku and click on the new button in the top right corner of the page. Then select create new app from the dropdown menu.
+     - Go to Heroku and click on the new button at the top right of the page. Select create new app from the dropdown menu.
 
-     - Choose an app name, select the region and click create app.
+     - Enter a name, change region to Europe and click create app.
 
      - Go to settings and select Config Vars
 
-     - Add a new Config Var with a keyword of PORT and a value of 8000
+     - Locate Buildpacks and add Python and NodeJS in that order.
 
-     - Next in settings find Buildpacks and add Buildpacks Python and NodeJS in that order.
+     - Add a new Config Var with a keyword of PORT and a value of 8000
 
      - Exit settings and click Deploy. Select GitHub from the deploy options.
 
-     - Find your repository and connect it to Heroku.
+     - Select your repository and connect it to Heroku.
 
-     - Select Manual Deploy from the options, make sure main branch is selected and click Deploy Branch.
+     - Click Enable Automatic Deploys in the automatic deploys section or make sure main branch is selected and click Deploy Branch in the manual deploy section.
 
      - The live version of the app can be found here [Live Game Link](https://pub-quiz-challenge.herokuapp.com/)
 
@@ -224,7 +224,7 @@ If play again is chosen, the quiz restarts and the user enters their name again 
 
 ## Credits
 
-  - [fun quizzes](https://www.funquizzes.uk//pub-quiz-questions) used to get questions for different topics
+  - [fun quizzes](https://www.funquizzes.uk//pub-quiz-questions) used to get questions and answers for different topics
 
   - The template used for this project was the Code Institute python essentials template found [Here](https://github.com/Code-Institute-Org/python-essentials-template)
 
