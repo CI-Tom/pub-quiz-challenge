@@ -37,8 +37,7 @@ Game developed by Tom Manahan for Code Institute Project Portfolio 3 using Pytho
 
 7.  [Testing](#testing)
     - [Validator Testing](#validator-testing) 
-    - [Testing User Stories](#testing-user-stories)
-    - [Function And Bug Testing](#function-and-bug-testing)
+    - [Bug Testing](#bug-testing)
 
 8.  [Deployment](#deployment)   
 
