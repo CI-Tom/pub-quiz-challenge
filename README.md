@@ -21,96 +21,88 @@ Game developed by Tom Manahan for Code Institute Project Portfolio 3 using Pytho
 1.  [How to play](#how-to-play)
 
 2.  [Project Goals](#project-goals)
-    - [Main Goals](#main-goals-of-this-project-include)
-    - [Target Audience](#target-audience-of-the-project-include)
+    - [Main Goals](#main-goals)
+    - [Target Audience](#target-audience)
 
-3.  [User Stories](#user-stories)
-
-4.  [Features](#features)
+3.  [Features](#features)
     - [Start Screen](#start-screen) 
     - [Bet Input](#bet-input)
     - [Main Game Screen](#main-game-screen)
 
-5.  [Future Features](#possible-future-features)
+4.  [Future Features](#possible-future-features)
 
-6.  [Technologies](#technologies)
+5.  [Technologies](#technologies)
     - [Platforms](#platforms)
     - [Python Modules](#python-modules)
 
-7.  [Flow Chart](#flow-chart)
+6.  [Flow Chart](#flow-chart)
 
-8.  [Testing](#testing)
+7.  [Testing](#testing)
     - [Validator Testing](#validator-testing) 
     - [Testing User Stories](#testing-user-stories)
     - [Function And Bug Testing](#function-and-bug-testing)
 
-9.  [Deployment](#deployment)   
+8.  [Deployment](#deployment)   
 
-10. [Credits](#credits)
+9. [Credits](#credits)
 
-11. [Acknowledgements](#acknowledgements)
+10. [Acknowledgements](#acknowledgements)
 
 ## How to play 
-This game was designed to be very simple to play and user friendly.
-Instructions are given along the way of what key to press to continue the game and the first letter of the input corresponds to the target word(for example S to start game).
+The Pub Quiz Challenge is a basic terminal game designed to test user's knowledge in the style of a pub quiz.
 
-The aim of the game is to get as close to 21 as you can without going over it. If you do you will bust and lose the hand. You will also lose if the dealer gets closer to 21 than you do.
+There are five ares of expertise to choose from. 
 
-At the start of each hand, you will be dealt 2 cards. You will then be given the choice of whether to hit or stand. If you choose hit you will be dealt another card if you choose to stand it is the dealer's turn. The dealer has to hit until they reach 17.
+At the the start of the game the user is presented with the welcome screen and asked to enter their name.
 
-Each card number is worth its value, Jacks, Queens and Kings are worth 10 and Aces are worth both 11 and 1(If you get an Ace and will are over 21 it changes to a 1).
+Once a name is entered, the user must then select form the list of five topics to start the game.
 
-There is also a very simple chip betting system in the game. You will start the game with 500 chips and at the beginning of every hand will be given the choice of how many chips you want to bet. If you win the hand you double the number of chips you bet and if you lose the hand you lose all the chips you bet. If you run out of chips it's game over and the game restarts.
+The game presents the user with a question and three options to choose from for the answer.
+
+The user must select an answer from the options by entering A, B or C.
+
+A message is the displayed to let the user know if they are correct or not, and the score increments by 1.
+
+When all questions are answered, the total score is displayed as a percentage of correct answers and the user may select to play again or quit.
+
+If play again is chosen, the quiz restarts and the user enters their name again and has the option to pick the same or another topic.
+
 
 [Top of page](#pub-quiz-challenge)
 
 
 ## Project Goals
 
- This project was created for project 3 of Code Institutes Diploma in full stack web development.
+ This project was created for Code Institute's full stack software development course for Portfolio Project 3
 
- - ### Main goals of this project include
+ - ### Main goals
   
-   - Creating a fully functional blackjack terminal game using python.
+   - Create a functional terminal game using the Python language.
 
-   - Making the game as realistic as possible for the user
+   - Make the game user friendly and easy to understand while still presenting a challenge
 
-   - Making the game easy to understand for the user while also including game instructions.
+   - Implement technologies learned from the Python module such as Lists, Dictionaries, functions etc.
 
- - ### Target audience of the project include 
+ - ### Target audience
 
-   - Users that have an interest in card games
+   - Users with an interest in quizzes
 
-   - Users that have an interest in playing simple terminal games for fun.
-
-   [Top of page](#pub-quiz-challenge)
-
-## User stories
-
- - As a user I want
-
-   - Clear instructions on how to start the game.
-   
-   - Instructions on how to play the game
-
-   - An option to play the game again when finished
-
-   - To be able to enter a username
-
-   - Game feedback if I have an incorrect input
+   - Users who want to test their general knowledge
 
    [Top of page](#pub-quiz-challenge)
+
 
 ## Features
 
  ### Start screen
 
- ![Start Screen](docs/README-images/start-screen.png)
-
- The start screen features a "Welcome To Blackjack" ASCII text message and a message prompting the user to either press S to start the game or I for the instruction screen.
+  When the 'Run Program' button is clicked, the user is presented with the start screen.
+  The start screen features a "Welcome To Blackjack" ASCII text message and a message prompting the user to either press S to start the game or I for the instruction screen.
 
   - If the user presses the S key they are shown a prompt to enter their username.
   If the username is valid the user is shown a welcome message and the game starts.
+ 
+ ![Start Screen](assets/images/Quiz%20Start%20Screen.PNG)
 
  ![Username](docs/README-images/Home-screen.png)
 
