@@ -51,7 +51,7 @@ def start_new_quiz():
     print("--------------------------------------------------------------")
     print("")
 
-    player = input("Welcome to Pub Quiz! Enter your first name to start: \n")
+    player = input("Welcome to Pub Quiz! Enter your name to start: \n")
     player = player.capitalize()
 
     print(f"Hi {player}, please choose a topic from the list below: \n")
