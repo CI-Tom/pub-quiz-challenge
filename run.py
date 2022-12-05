@@ -194,6 +194,7 @@ def play_again():
         return False
 
 
+# Create dictionaries to contain questions and correct answer pairs for topics
 science = {
     question_data[1][0]: "A",
     question_data[2][0]: "C",
@@ -234,6 +235,7 @@ history = {
     question_data[5][4]: "B",
 }
 
+# Create lists with embedded lists of possible answers from worksheet
 science_choices = [
     [answer_a_data[1][0], answer_b_data[1][0], answer_c_data[1][0]],
     [answer_a_data[2][0], answer_b_data[2][0], answer_c_data[2][0]],
