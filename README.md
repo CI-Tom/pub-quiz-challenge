@@ -25,7 +25,7 @@ Game developed by Tom Manahan for Code Institute Project Portfolio 3 using Pytho
     - [Target Audience](#target-audience)
 
 3.  [Features](#features)
-    - [Start Screen](#start-screen) 
+    - [Start Screen](#welcome-screen) 
     - [Bet Input](#bet-input)
     - [Main Game Screen](#main-game-screen)
 
@@ -94,9 +94,9 @@ If play again is chosen, the quiz restarts and the user enters their name again 
 
 ## Features
 
- ### Start screen
+ ### Welcome screen
 
-  When the 'Run Program' button is clicked, the user is presented with the start screen.
+  When the 'Run Program' button is clicked on the Heroku mock terminal, the user is presented with the start screen.
   The start screen features a "Welcome To Blackjack" ASCII text message and a message prompting the user to either press S to start the game or I for the instruction screen.
 
   - If the user presses the S key they are shown a prompt to enter their username.
