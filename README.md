@@ -26,9 +26,6 @@ Game developed by Tom Manahan for Code Institute Project Portfolio 3 using Pytho
 
 3.  [Features](#existing-features)
     - [Start Screen](#welcome-screen)
-    - [Topic selection](assets/images/Topic%20selection.PNG)
-    - [Question and Choices](assets/images/Question%20and%20Choices.PNG)
-    - [Score and End](assets/images/Score%20and%20End.PNG)
 
 4.  [Future Features](#possible-future-features)
 
@@ -130,6 +127,8 @@ If play again is chosen, the quiz restarts and the user enters their name again 
 
   Clicking the 'RUN PROGRAM' button will restart the application again.
 
+  [Top of page](#pub-quiz-challenge) 
+
 
 ## Possible Future Features
 
@@ -138,6 +137,7 @@ If play again is chosen, the quiz restarts and the user enters their name again 
    - Add a leaderboard using player names and scores
 
   [Top of page](#pub-quiz-challenge) 
+
 
 ## Technologies
 
@@ -149,64 +149,48 @@ If play again is chosen, the quiz restarts and the user enters their name again 
 
    - [GitHub](https://github.com/) and Git were used for version control on the project.
 
-   - Gitpod was the I.D.E used to create the project.
-
-   - [Code Institute](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwihmpOZxdT7AhUY7O0KHQfoCQoYABAAGgJkZw&ohost=www.google.com&cid=CAESbOD23lTrQj-qdni7kiJrbFGiE6foYCdCBlBfPjQiteL7YMJQfW4m6Wq768MU5PttgLc80SMqCtz2JIXMrLRwvBZnNHF48SVSK7-f6l2qO2XaL1vj4yBiBt3ZFE9Zd3_sMo8_VpVo0G1C0DeN0A&sig=AOD64_0o-rshCZ_TWMJtTwfpl71-w7W3GA&q&adurl&ved=2ahUKEwiC6ouZxdT7AhUPXMAKHXZJARkQ0Qx6BAgHEAE) template was used on Gitpod for this project.
+   - [Gitpod](https://www.gitpod.io/) was the I.D.E used to create the project.
 
  ### Python Modules
 
-   - [os](https://docs.python.org/3/library/os.html) was imported to make the clear function to clear the terminal
+   - [Gspread](https://pypi.org/project/gspread/) was imported to access Google worksheet
 
-   - [random](https://docs.python.org/3/library/random.html) was imported for the card shuffle function.
-
-   - [time](https://docs.python.org/3/library/time.html) was imported for the sleep function.
-
-   - [pyfiglet](https://pypi.org/project/pyfiglet/0.7/) was imported for custom ASCII messages.
-
-   - [colorama](https://pypi.org/project/colorama/) was imported for custom coloured messages. 
+   - [Google credentials](https://developers.google.com/workspace/guides/create-credentials) was imported to verify access
 
    [Top of page](#pub-quiz-challenge)
 
+
 ## Flow Chart
 
- The below flow chart was used in the design of the game and shows how the game loop works from start to finish.
+ The flow chart below represents the structure of the quiz application and how each feature interacts.
 
- ![Flowchart](docs/README-images/flowchart.png)
+ ![Flowchart](assets/images/Quiz%20Game%20Flow%20Chart.PNG)
 
  [Top of page](#pub-quiz-challenge)
+
 
 ## Testing
 
  ### Validator Testing
 
-  - No errors or warnings were found when putting the code through the CI Python Linter
-  ![Linter](docs/README-images/linter.png)
+  - PEP8online Python validator link on the Code Institute Portfolio Project Scope page would not work for me and just brings me to a page with ads
+
+  ![Python validator](assets/images/PEP8online.PNG)
   
- ### Testing User Stories
+  - No errors or warnings were found when putting the code through the CI Python Linter
 
-  - As a user, I want clear instructions on how to start the game.
+  ![Linter](assets/images/PP3-CI_Python%20Linter-Result.PNG)
 
-     - The start screen has a very simple layout and only gives the user two clearly labelled options. Either S to start the game or I to read the instructions.
+  - Also no errors returned when checking syntax on Python Syntax Checker
 
-  -  As a user, I want Instructions on how to play the game.
+  ![Syntax checker](assets/images/Python%20Syntax%20Checker%20Result.PNG)
 
-     - On the start screen if the user wishes to they can select to view the instructions page which gives a full rundown on how the game works.
+ ### Bug testing
 
-  -  As a user, I want an option to play the game again when finished.
+  - At first there were a lot of "line too long" errors which were solved either by shortening lines of code, where possible, or
+    rewriting code in a different way i.e. creating nested lists.
 
-     - After every hand, the user is given the choice to play again by typing Y for yes or N for no. If the user wants to continue with their current chips they can select yes, otherwise they can select no. 
-
-  - As a user, I want to be able to enter a username.
-
-     - At the start of every game, the user must enter a username to continue.
-
-  - As a user, I want game feedback if I have an incorrect input.
-
-     - The user is given clear instructions in game on every input needed and is unable to continue until they input correctly.
-
- ### Function and bug testing
-
-  - All other testing for this project including Function testing and bugs are on a separate file found here [Function Testing](docs/TESTING.md)  
+  - Had an issue when testing on Heroku where text was not displaying correctly and went back through the Love Sandwiches walkthrough project and found that the new line method was required at the end of input methods
 
   [Top of page](#pub-quiz-challenge)
 
@@ -235,6 +219,7 @@ If play again is chosen, the quiz restarts and the user enters their name again 
 
    [Top of page](#pub-quiz-challenge)
 
+
 ## Credits
 
   - [fun quizzes](https://www.funquizzes.uk//pub-quiz-questions) used to get questions for different topics
@@ -258,6 +243,7 @@ If play again is chosen, the quiz restarts and the user enters their name again 
   - [Grammarly](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjGsafOh9_7AhUJl-0KHQmxCicYABAAGgJkZw&ohost=www.google.com&cid=CAESbOD2Xcxc5xKr6RvUm7TpPwpbCU10LjQrGKOUpXrGNnyNWmaO2Zk_y3dAnW0mpTc0x3-DbRTeK6OH9zUg9xamXSqmNqv6wX1BoWxsXzUdK4K_UGDr0UcXNmNKVLXoTN8VKvjK_8V0CSW2WZ2Chg&sig=AOD64_2EL-jS1jY_9um_H6eqlNDcftFF3Q&q&adurl&ved=2ahUKEwjs2qHOh9_7AhWGI8AKHbzkBSwQ0Qx6BAgHEAE) was used for the README spell and grammar checks.
 
   [Top of page](#pub-quiz-challenge)
+
 
 ## Acknowledgements
 
