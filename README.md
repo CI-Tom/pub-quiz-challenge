@@ -197,60 +197,56 @@ If play again is chosen, the quiz restarts and the user enters their name again 
 
 ## Deployment
 
-  The following steps were used to deploy this project to [Heroku](https://www.heroku.com/) 
+  This project was deployed to [Heroku](https://www.heroku.com/) using Code Institute's mock terminal.
 
-   - Go to Heroku and click on the new button in the top right corner of the page. Then select create new app from the dropdown menu.
+   - Steps
 
-   - Choose an app name, select the region and click create app.
+     - Go to Heroku and click on the new button in the top right corner of the page. Then select create new app from the dropdown menu.
 
-   - Go to settings and select Config Vars
+     - Choose an app name, select the region and click create app.
 
-   - Add a new Config Var with a keyword of PORT and a value of 8000
+     - Go to settings and select Config Vars
 
-   - Next in settings find Buildpacks and add Buildpacks Python and NodeJS in that order.
+     - Add a new Config Var with a keyword of PORT and a value of 8000
 
-   - Exit settings and click Deploy. Select GitHub from the deploy options.
+     - Next in settings find Buildpacks and add Buildpacks Python and NodeJS in that order.
 
-   - Find your repository and connect it to Heroku.
+     - Exit settings and click Deploy. Select GitHub from the deploy options.
 
-   - Select Manual Deploy from the options, make sure main branch is selected and click Deploy Branch.
+     - Find your repository and connect it to Heroku.
 
-   - The live version of the app can be found here [Live Game Link](https://python-blackjack.herokuapp.com/)
+     - Select Manual Deploy from the options, make sure main branch is selected and click Deploy Branch.
 
-   [Top of page](#pub-quiz-challenge)
+     - The live version of the app can be found here [Live Game Link](https://pub-quiz-challenge.herokuapp.com/)
+
+  [Top of page](#pub-quiz-challenge)
 
 
 ## Credits
 
   - [fun quizzes](https://www.funquizzes.uk//pub-quiz-questions) used to get questions for different topics
 
-  - Card suit Unicode symbols were found on Wikipedia [Here](https://en.wikipedia.org/wiki/Playing_cards_in_Unicode)
-
-  - The clear display function was found on geek for geeks [Here](https://www.geeksforgeeks.org/clear-screen-python/#:~:text=You%20can%20simply%20%E2%80%9Ccls%E2%80%9D%20to%20clear%20the%20screen%20in%20windows.)
-
   - The template used for this project was the Code Institute python essentials template found [Here](https://github.com/Code-Institute-Org/python-essentials-template)
 
-  - The flowchart created for this project was made on [Lucidchart](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjm0IXtxdv7AhUm7-0KHRVNDHwYABAAGgJkZw&ohost=www.google.com&cid=CAESbOD2FmT0TtByzzkK620v_t26vgxZBwp1SyXz5cFeI64MHuAO2lqZGDOZZBd9ZTH5BuNL_bcb_Nr1Z5HKl_aYY9dOpjvjSG3PcPU27A1FbQ5b2_Us-gOYsRmxM1SH0BUrkbAYjVAiG8hA6ifQ2A&sig=AOD64_2FaTT_YSoGZDvf3kC_eU4DD5hjRw&q&adurl&ved=2ahUKEwiA0P7sxdv7AhUCYcAKHQmCCdQQ0Qx6BAgJEAE)
+  - The flowchart used in this project was created on [Lucidchart](https://lucid.co/)
 
-  - The linter used for code validation was the CI Python Linter found [Here](https://pep8ci.herokuapp.com/)
+  - Validation was done using the CI Python Linter found [Here](https://pep8ci.herokuapp.com/)
 
-  - The idea of how to set up the deck and dictionary values for cards were Found on Dave Crabbes youtube video [Here](https://www.youtube.com/watch?v=SHz5cUeljZw)
+  - The idea to use a Google worksheet to store the quiz questions and answers was from the Code Institute [Love Sandwiches](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LS101+2021_T1/courseware/293ee9d8ff3542d3b877137ed81b9a5b/58d3e90f9a2043908c62f31e51c15deb/) walkthrough project
 
   - [Stack Overflow](https://stackoverflow.com/) was used for solutions for various bug fixes.
 
   - [W3Schools](https://www.w3schools.com/) was used for research on various syntaxes.
 
-  - [Grammarly](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjGsafOh9_7AhUJl-0KHQmxCicYABAAGgJkZw&ohost=www.google.com&cid=CAESbOD2Xcxc5xKr6RvUm7TpPwpbCU10LjQrGKOUpXrGNnyNWmaO2Zk_y3dAnW0mpTc0x3-DbRTeK6OH9zUg9xamXSqmNqv6wX1BoWxsXzUdK4K_UGDr0UcXNmNKVLXoTN8VKvjK_8V0CSW2WZ2Chg&sig=AOD64_2EL-jS1jY_9um_H6eqlNDcftFF3Q&q&adurl&ved=2ahUKEwjs2qHOh9_7AhWGI8AKHbzkBSwQ0Qx6BAgHEAE) was used for the README spell and grammar checks.
+  - This readme structure was adapted from my classmate Sean Johnston and the Code Institute's Ultimate Battleships readme template
 
   [Top of page](#pub-quiz-challenge)
 
 
 ## Acknowledgements
 
- - To my classmates Sean Finn and Victoria Traynor who helped review my project along the way and discussions about various issues and bugs.
+ - To the slack community for all the help and support throughout the Python module and project.
 
- - To the slack community as a whole for help and support throughout the whole project.
-
- - To my friends, family and in particular my fiancee Sinead for support throughout the project.
+ - To my friends and family for all their help and support.
 
  [Top of page](#pub-quiz-challenge)
