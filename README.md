@@ -1,6 +1,5 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-# Pub Quiz
+# Pub Quiz Challenge
 
 ## Overview
 A Python terminal game for uesers to test their knowledge in 5 areas: -
@@ -63,7 +62,7 @@ Each card number is worth its value, Jacks, Queens and Kings are worth 10 and Ac
 
 There is also a very simple chip betting system in the game. You will start the game with 500 chips and at the beginning of every hand will be given the choice of how many chips you want to bet. If you win the hand you double the number of chips you bet and if you lose the hand you lose all the chips you bet. If you run out of chips it's game over and the game restarts.
 
-[Top of page](#python-blackjack)
+[Top of page](#pub-quiz-challenge)
 
 
 ## Project Goals
@@ -84,7 +83,7 @@ There is also a very simple chip betting system in the game. You will start the 
 
    - Users that have an interest in playing simple terminal games for fun.
 
-   [Top of page](#python-blackjack)
+   [Top of page](#pub-quiz-challenge)
 
 ## User stories
 
@@ -100,7 +99,7 @@ There is also a very simple chip betting system in the game. You will start the 
 
    - Game feedback if I have an incorrect input
 
-   [Top of page](#python-blackjack)
+   [Top of page](#pub-quiz-challenge)
 
 ## Features
 
@@ -137,7 +136,7 @@ There is also a very simple chip betting system in the game. You will start the 
 
    ![Dealing Cards](docs/README-images/deal-cards.png)
 
-   [Top of page](#python-blackjack)
+   [Top of page](#pub-quiz-challenge)
 
  ### Main Game Screen
 
@@ -170,7 +169,7 @@ There is also a very simple chip betting system in the game. You will start the 
 
    ![Game Over](docs/README-images/game-over.png)
 
-   [Top of page](#python-blackjack)
+   [Top of page](#pub-quiz-challenge)
 
 ## Possible Future Features
 
@@ -188,7 +187,7 @@ There is also a very simple chip betting system in the game. You will start the 
 
      - Card shuffling sound effects is a feature I would eventually like to add to the game. 
 
-     [Top of page](#python-blackjack) 
+     [Top of page](#pub-quiz-challenge) 
 
 ## Technologies
 
@@ -216,7 +215,7 @@ There is also a very simple chip betting system in the game. You will start the 
 
    - [colorama](https://pypi.org/project/colorama/) was imported for custom coloured messages. 
 
-   [Top of page](#python-blackjack)
+   [Top of page](#pub-quiz-challenge)
 
 ## Flow Chart
 
@@ -224,7 +223,7 @@ There is also a very simple chip betting system in the game. You will start the 
 
  ![Flowchart](docs/README-images/flowchart.png)
 
- [Top of page](#python-blackjack)
+ [Top of page](#pub-quiz-challenge)
 
 ## Testing
 
@@ -259,7 +258,7 @@ There is also a very simple chip betting system in the game. You will start the 
 
   - All other testing for this project including Function testing and bugs are on a separate file found here [Function Testing](docs/TESTING.md)  
 
-  [Top of page](#python-blackjack)
+  [Top of page](#pub-quiz-challenge)
 
 
 ## Deployment
@@ -284,9 +283,11 @@ There is also a very simple chip betting system in the game. You will start the 
 
    - The live version of the app can be found here [Live Game Link](https://python-blackjack.herokuapp.com/)
 
-   [Top of page](#python-blackjack)
+   [Top of page](#pub-quiz-challenge)
 
 ## Credits
+
+  - [fun quizzes](https://www.funquizzes.uk//pub-quiz-questions) used to get questions for different topics
 
   - Card suit Unicode symbols were found on Wikipedia [Here](https://en.wikipedia.org/wiki/Playing_cards_in_Unicode)
 
@@ -306,7 +307,7 @@ There is also a very simple chip betting system in the game. You will start the 
 
   - [Grammarly](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjGsafOh9_7AhUJl-0KHQmxCicYABAAGgJkZw&ohost=www.google.com&cid=CAESbOD2Xcxc5xKr6RvUm7TpPwpbCU10LjQrGKOUpXrGNnyNWmaO2Zk_y3dAnW0mpTc0x3-DbRTeK6OH9zUg9xamXSqmNqv6wX1BoWxsXzUdK4K_UGDr0UcXNmNKVLXoTN8VKvjK_8V0CSW2WZ2Chg&sig=AOD64_2EL-jS1jY_9um_H6eqlNDcftFF3Q&q&adurl&ved=2ahUKEwjs2qHOh9_7AhWGI8AKHbzkBSwQ0Qx6BAgHEAE) was used for the README spell and grammar checks.
 
-  [Top of page](#python-blackjack)
+  [Top of page](#pub-quiz-challenge)
 
 ## Acknowledgements
 
@@ -316,4 +317,4 @@ There is also a very simple chip betting system in the game. You will start the 
 
  - To my friends, family and in particular my fiancee Sinead for support throughout the project.
 
- [Top of page](#python-blackjack)
+ [Top of page](#pub-quiz-challenge)
