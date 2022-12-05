@@ -24,10 +24,11 @@ Game developed by Tom Manahan for Code Institute Project Portfolio 3 using Pytho
     - [Main Goals](#main-goals)
     - [Target Audience](#target-audience)
 
-3.  [Features](#features)
-    - [Start Screen](#welcome-screen) 
-    - [Bet Input](#bet-input)
-    - [Main Game Screen](#main-game-screen)
+3.  [Features](#existing-features)
+    - [Start Screen](#welcome-screen)
+    - [Topic selection](assets/images/Topic%20selection.PNG)
+    - [Question and Choices](assets/images/Question%20and%20Choices.PNG)
+    - [Score and End](assets/images/Score%20and%20End.PNG)
 
 4.  [Future Features](#possible-future-features)
 
@@ -92,94 +93,51 @@ If play again is chosen, the quiz restarts and the user enters their name again 
    [Top of page](#pub-quiz-challenge)
 
 
-## Features
+## Existing Features
 
  ### Welcome screen
 
-  When the 'Run Program' button is clicked on the Heroku mock terminal, the user is presented with the start screen.
-  The start screen features a "Welcome To Blackjack" ASCII text message and a message prompting the user to either press S to start the game or I for the instruction screen.
+  When the 'Run Program' button is clicked on the Heroku mock terminal screen, the user is presented with the start screen.
 
-  - If the user presses the S key they are shown a prompt to enter their username.
-  If the username is valid the user is shown a welcome message and the game starts.
- 
- ![Start Screen](assets/images/Quiz%20Start%20Screen.PNG)
+  The start screen features a "Pub Quiz" ASCII text message and a message welcoming the user and asks the user to enter their name.
 
- ![Username](docs/README-images/Home-screen.png)
+   - When the user enters their name, they are then presented with a message to select one of 5 topics.
+   - The user inputs 1,2,3,4 or 5.
 
-  - If the user presses the I key they are brought to the instructions page where text is typed out in a typewriter effect and the user is given a prompt to enter any key to return to the main menu
+  ![Topic selection](assets/images/Topic%20selection.PNG)
+  
+  The user is presented with a message displaying their choice.
 
-  ![Instruction Page](docs/README-images/ins-page.png)
+  The quiz then starts and presents the user with the first question from their chosen topic with the three possible answers.
 
- ### Bet Input
+  All questions and answers are stored on a Google Sheets worksheet and accessed through the Google Cloud API services.
+  
+  Credentials are stored in the creds.json file to allow access to Google drive and spreadsheets from the app.
 
-  ![Bet Input](docs/README-images/Chip-input.png)
+  ![Question and Choices](assets/images/Question%20and%20Choices.PNG)
 
-  After the user enters a valid username, they are brought to the bet input screen which asks them how many chips they would like to bet
+  After each question is answered, a message is displayed telling the user if the chosen answer was correct or incorrect.
 
-   - If the user tries to bet more chips than they currently have they are shown an error message telling them they don't have enough chips to place the bet.
+  The quiz then moves on to the next question and this pattern continues until all questions are answered.
 
-   ![Invalid Bet](docs/README-images/invalid-bet.png)
+  A this point the user's score is displayed and the user is asked if they would like to play again.
 
-   - If the user tries to type in a bet amount that is not a number or zero they are shown an error message that asks them to type in a valid bet amount.
+  If 'Y' is entered, the quiz restarts and the user enters their name again and selects the same or a new topic.
 
-   ![Invalid Bet 2](docs/README-images/nan.png)
+  If 'N' is entered, a 'Goodbye and thanks for playing' message is displayed and the application stops.
 
-   - If the user enters a valid bet amount they are shown an ASCII message telling them the cards are being dealt before moving on to the next screen.
+  ![Score and End](assets/images/Score%20and%20End.PNG)
 
-   ![Dealing Cards](docs/README-images/deal-cards.png)
+  Clicking the 'RUN PROGRAM' button will restart the application again.
 
-   [Top of page](#pub-quiz-challenge)
-
- ### Main Game Screen
-
-  ![Main Game Screen](docs/README-images/game-screen.png) 
-
-  After the user enters a valid bet amount the cards are dealt and the user is brought to the main game screen. The user is shown their two cards and total, 1 dealer card and total and is given the option of whether to hit or stand.
-
-   - If the user selects hit they are dealt another card and asked to hit or stand again until they bust or choose to stand.
-
-   ![Player Hit](docs/README-images/hit-screen.png)
-
-   - If the user selects stand it is the dealer's turn. The dealer's 2 cards and the total are now revealed to the player and the dealer takes another card if they are not already on a total of 17.
-
-   ![Player Stand](docs/README-images/stand-screen.png)
-
-   - After both the player has chosen to stand and the dealer has taken its go the 2 hands are compared and the user is told if they either won or lost the hand. If the user won the hand the text is green and if the user lost the hand the text is red.
-   The user is then given an updated chip count and asked if they want to play again.
-
-   ![Hand Compare](docs/README-images/hand-compare.png)
-
-   - If the user selects no on playing again they are brought back to the start screen and their chips reset.
-
-   - If the user selects yes on playing again they are brought back to the bet input screen and their current chip count stays the same.
-
-   ![Play Again](docs/README-images/play-again.png)
-
-   - If the user runs out of chips they are told that they have run out of chips, shown an ASCII text game over message and are brought back to the start screen. Their chips are also reset.
-
-   ![Out Of Chips](docs/README-images/out-of-chips.png)
-
-   ![Game Over](docs/README-images/game-over.png)
-
-   [Top of page](#pub-quiz-challenge)
 
 ## Possible Future Features
 
  Some possible features that could be implemented into the game in the future are
 
-   - Leaderboard betting system
+   - Add a leaderboard using player names and scores
 
-     - While there is currently a chip betting system already in the game I would like to expand on it for game replayability.
-
-   - ASCII card art
-
-     - While there are currently Unicode suits for cards I would like to have the cards generated in ASCII art in the future, including different colors to match card suits.
-
-   - Sound effects
-
-     - Card shuffling sound effects is a feature I would eventually like to add to the game. 
-
-     [Top of page](#pub-quiz-challenge) 
+  [Top of page](#pub-quiz-challenge) 
 
 ## Technologies
 
