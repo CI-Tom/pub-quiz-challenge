@@ -31,9 +31,16 @@ leaderboard = SHEET.worksheet('leaderboard')
 leaderboard_data = leaderboard.get_all_values()
 
 
+def main():
+    """
+    Main function to run the quiz
+    """
+    start_new_quiz()
+
+
 def start_new_quiz():
     """
-    Allow player to start quiz and select a topic.
+    Allow player to select a topic when quiz starts.
     Player must enter name and select a topic to begin
     """
     answers = []
@@ -167,7 +174,8 @@ def check_correct_answer(answer, choice):
         print("You are correct!")
         return 1
     else:
-        print("Sorry, you are wrong!")
+        print()
+        print("Sorry, you are wrong! The correct answer is " + answer)
         return 0
 
 
@@ -276,9 +284,9 @@ history_choices = [
     [answer_a_data[5][4], answer_b_data[5][4], answer_c_data[5][4]]
 ]
 
-start_new_quiz()
+main()
 
 while play_again():
-    start_new_quiz()
+    main()
 
 print("\nOK Goodbye. Thanks for Playing!\n")
