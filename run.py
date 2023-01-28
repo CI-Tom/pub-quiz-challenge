@@ -291,7 +291,15 @@ def play_again():
     """
     Allows player to play another game and select a different topic
     """
-    replay = input("\nWould you like to play again? Enter Y / N: \n").upper()
+    while True:
+        replay = input("\nWould you like to play again? Enter Y / N: \n")
+        replay = replay.upper()
+
+        if not replay.isalpha():
+            print("You can only enter 'Y' or 'N'. Try again")
+            continue
+        else:
+            break
 
     if replay == "Y":
         return True
