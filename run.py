@@ -243,6 +243,7 @@ def start_new_quiz():
 
     player_name()
 
+    print("--------------------------------------------------------\n")
     select_topic()
 
 
