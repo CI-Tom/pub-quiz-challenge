@@ -269,7 +269,7 @@ def check_answer(answer, choice):
     Checks answer and provides feedback for correct and incorrect answers
     """
     if answer == choice:
-        print("You are correct!")
+        print(f"\nYou selected {choice}. You are correct! \n")
         return 1
     else:
         print()
