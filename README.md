@@ -191,6 +191,8 @@ If play again is chosen, the quiz restarts and the user enters their name again 
 
   - Had an issue when testing on Heroku where text was not displaying correctly and went back through the Love Sandwiches walkthrough project and found that the new line method was required at the end of input methods
 
+  - Fixed bug where program restarted if incorrect topic was selected. Now the user is notified of an incorrect entry and given the option to choose again.
+
   [Top of page](#pub-quiz-challenge)
 
 
