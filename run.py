@@ -256,7 +256,7 @@ def player_name():
         player = player.capitalize()
 
         if not player.isalpha():
-            print("Please enter letters only. \n")
+            print("You must enter a name using only letters. \n")
             continue
         else:
             print(f"\nHi {player}, please choose a topic below: \n")
