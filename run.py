@@ -241,12 +241,26 @@ def start_new_quiz():
     print("--------------------------------------------------------------")
     print("")
 
-    player = input("Welcome to Pub Quiz! Enter your first name to start: \n")
-    player = player.capitalize()
-
-    print(f"Hi {player}, please choose a topic from the list below: \n")
+    player_name()
 
     select_topic()
+
+
+def player_name():
+    """
+    Allows user to enter their first name at start of quiz
+    """
+    while True:
+        player = input("Welcome to Pub Quiz! Enter your first name to start: ")
+        print()
+        player = player.capitalize()
+
+        if not player.isalpha():
+            print("Please enter letters only. \n")
+            continue
+        else:
+            print(f"\nHi {player}, please choose a topic below: \n")
+            break
 
 
 def check_answer(answer, choice):
