@@ -331,11 +331,11 @@ def play_again():
         replay = input("\nWould you like to play again? Enter Y / N: \n")
         replay = replay.upper()
 
-        if not replay.isalpha():
-            print("You can only enter 'Y' or 'N'. Try again")
-            continue
-        else:
+        if replay in ("Y", "N"):
             break
+
+        else:
+            print("You can only enter 'Y' or 'N'. Try again")
 
     if replay == "Y":
         return True
