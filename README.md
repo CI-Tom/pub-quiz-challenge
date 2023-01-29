@@ -193,7 +193,7 @@ If play again is chosen, the quiz restarts and the user enters their name again 
 
   - Fixed bug where program restarted if incorrect topic was selected. Now the user is notified of an incorrect entry and given the option to choose again.
 
-  - Fixed bug that accepts empty/invalid entry for name. User is informed that there must be an entry and it must only consist of letters
+  - Fixed bug that accepts empty/invalid entry for name. User is informed that there must be an entry and it must only consist of letters. The program also requires a minimum of two letters to be entered.
 
   - Fixed bug that accepts empty/invalid entry when asked if the user wants to play again. User is informed that only Y or N is accepted(lower case is also accepted).
 
