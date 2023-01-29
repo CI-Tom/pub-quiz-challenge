@@ -294,6 +294,9 @@ def player_name():
         if not player.isalpha():
             print("You must enter a name using only letters. \n")
             continue
+        elif len(player) < 2:
+            print("\nPlease enter a minimum of 2 letters. \n")
+            continue
         else:
             print(f"\nHi {player}, please choose a topic below: \n")
             break
