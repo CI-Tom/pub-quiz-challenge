@@ -140,8 +140,15 @@ def select_topic():
                 print("")
                 print(i)
 
-            choice = input("Enter you answer (A, B or C): \n").upper()
-            answers.append(choice)
+            while True:
+                choice = input("Enter you answer (A, B or C): \n")
+                choice = choice.upper()
+
+                if choice in ("A", "B", "C"):
+                    answers.append(choice)
+                    break
+                else:
+                    print("INVALID: You must enter A, B or C only")
 
             correct_answers += check_answer(science.get(key), choice)
             num_question += 1
@@ -158,8 +165,15 @@ def select_topic():
                 print("")
                 print(i)
 
-            choice = input("Enter you answer (A, B or C): \n").upper()
-            answers.append(choice)
+            while True:
+                choice = input("Enter you answer (A, B or C): \n")
+                choice = choice.upper()
+
+                if choice in ("A", "B", "C"):
+                    answers.append(choice)
+                    break
+                else:
+                    print("INVALID: You must enter A, B or C only")
 
             correct_answers += check_answer(sports.get(key), choice)
             num_question += 1
@@ -176,8 +190,15 @@ def select_topic():
                 print("")
                 print(i)
 
-            choice = input("Enter you answer (A, B or C): \n").upper()
-            answers.append(choice)
+            while True:
+                choice = input("Enter you answer (A, B or C): \n")
+                choice = choice.upper()
+
+                if choice in ("A", "B", "C"):
+                    answers.append(choice)
+                    break
+                else:
+                    print("INVALID: You must enter A, B or C only")
 
             correct_answers += check_answer(movies_tv.get(key), choice)
             num_question += 1
@@ -194,8 +215,15 @@ def select_topic():
                 print("")
                 print(i)
 
-            choice = input("Enter you answer (A, B or C): \n").upper()
-            answers.append(choice)
+            while True:
+                choice = input("Enter you answer (A, B or C): \n")
+                choice = choice.upper()
+
+                if choice in ("A", "B", "C"):
+                    answers.append(choice)
+                    break
+                else:
+                    print("INVALID: You must enter A, B or C only")
 
             correct_answers += check_answer(music.get(key), choice)
             num_question += 1
@@ -212,8 +240,15 @@ def select_topic():
                 print("")
                 print(i)
 
-            choice = input("Enter you answer (A, B or C): \n").upper()
-            answers.append(choice)
+            while True:
+                choice = input("Enter you answer (A, B or C): \n")
+                choice = choice.upper()
+
+                if choice in ("A", "B", "C"):
+                    answers.append(choice)
+                    break
+                else:
+                    print("INVALID: You must enter A, B or C only")
 
             correct_answers += check_answer(history.get(key), choice)
             num_question += 1

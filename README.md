@@ -197,6 +197,8 @@ If play again is chosen, the quiz restarts and the user enters their name again 
 
   - Fixed bug that accepts empty/invalid entry when asked if the user wants to play again. User is informed that only Y or N is accepted(lower case is also accepted).
 
+  - Fixed bug that accepts empty/invalid entry when entering an answer selection. User now receives invalid entry notification and the option to enter the answer again.
+
   [Top of page](#pub-quiz-challenge)
 
 
